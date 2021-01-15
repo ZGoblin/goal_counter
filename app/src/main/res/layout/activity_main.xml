@@ -21,13 +21,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="300dp"
-            android:src="@drawable/logo_png"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:src="@drawable/logo_png" />
 
         <TextView
             android:id="@+id/btnNewGame"
@@ -35,12 +39,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/button_style"
+            android:fontFamily="@font/righteous"
             android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
             android:paddingBottom="10dp"
             android:text="New Game"
-            android:fontFamily="@font/righteous"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
@@ -48,28 +52,28 @@
             android:id="@+id/btnWinnerList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Winners"
-            android:fontFamily="@font/righteous"
-            android:textSize="20sp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:paddingBottom="10dp"
+            android:background="@drawable/button_style"
+            android:fontFamily="@font/righteous"
+            android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingRight="20dp"
-            android:paddingLeft="20dp"
-            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:text="Winners"
             android:textColor="@color/white"
-            android:background="@drawable/button_style"/>
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:textSize="20sp"
-            android:text="Goal counter  by Oleh Zaiets"
-            android:fontFamily="@font/righteous"
-            android:textColor="@color/white"
+            android:layout_gravity="end"
             android:layout_weight="1"
-            android:layout_gravity="end"/>
+            android:fontFamily="@font/righteous"
+            android:gravity="bottom"
+            android:text="Goal counter  by Oleh Zaiets"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
