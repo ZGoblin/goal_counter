@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Goal counter</string>
+    <string name="first_team">First team</string>
+    <string name="second_team">Second team</string>
+    <string name="start">Start</string>
+    <string name="back">Back</string>
+    <string name="choose_game">Choose game</string>
 </resources>
