@@ -32,6 +32,7 @@ class GameHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun bind(image: Int) {
         binding.ivImage.setImageResource(image)
+
         binding.ivImage.setOnClickListener {
             it.setBackgroundColor(Color.MAGENTA)
         }

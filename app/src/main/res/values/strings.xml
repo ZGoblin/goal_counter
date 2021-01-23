@@ -5,4 +5,8 @@
     <string name="start">Start</string>
     <string name="back">Back</string>
     <string name="choose_game">Choose game</string>
+    <string name="first_team">First team</string>
+    <string name="goal">GOAL!</string>
+    <string name="cancel">Cancel</string>
+    <string name="finish_now">Finish now</string>
 </resources>

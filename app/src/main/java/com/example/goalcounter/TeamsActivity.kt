@@ -7,10 +7,12 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.drawToBitmap
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.goalcounter.databinding.ActivityTeamsBinding
 
 class TeamsActivity: AppCompatActivity() {
+    private val TAG = "TEAMS_ACTIVITY"
     private val binding: ActivityTeamsBinding by lazy {
         ActivityTeamsBinding.inflate(layoutInflater)
     }
@@ -97,14 +99,13 @@ class TeamsActivity: AppCompatActivity() {
     }
 
     private fun backToPreviousActivity() {
-        finishActivity(0)
+        finish()
     }
 
-    private fun toMatchActivity() {
-
-    }
+    private fun toMatchActivity() {}
 
     private fun enableButtonStart(enable: Boolean) {
+        binding.btnStart.isEnabled = enable
         if (enable) {
             binding.btnStart.setBackgroundResource(R.drawable.button_style)
         }
