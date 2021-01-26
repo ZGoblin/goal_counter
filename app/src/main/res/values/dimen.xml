@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_winner_list">56sp</dimen>
+    <dimen name="button_padding">12dp</dimen>
+    <dimen name="button_margin">16dp</dimen>
+    <dimen name="button_font_size">16sp</dimen>
+    <dimen name="logo_padding">24dp</dimen>
+    <dimen name="period_font_size">36sp</dimen>
+    <dimen name="timer_font_size">48sp</dimen>
+    <dimen name="team_font_size">24sp</dimen>
+    <dimen name="score_font_size_two">96sp</dimen>
+    <dimen name="recycler_margin">4dp</dimen>
+    <dimen name="box_stroke">4dp</dimen>
+    <dimen name="winner_font">56sp</dimen>
+    <dimen name="font_size_dialog">28sp</dimen>
+    <dimen name="font_size_input">20sp</dimen>
+    <dimen name="game_width">84dp</dimen>
+    <dimen name="game_padding">8dp</dimen>
+</resources>

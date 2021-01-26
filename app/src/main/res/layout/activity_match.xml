@@ -27,11 +27,11 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_style"
         android:text="@string/cancel"
-        android:textSize="16sp"
+        android:textSize="@dimen/button_font_size"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        android:layout_margin="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/button_margin"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
 
@@ -39,12 +39,11 @@
         android:id="@+id/tvPeriod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1 TIME"
         android:fontFamily="@font/righteous"
-        android:textSize="36sp"
+        android:textSize="@dimen/period_font_size"
         android:textColor="@color/white"
-        app:layout_constraintLeft_toLeftOf="@id/tvTimer"
-        app:layout_constraintRight_toRightOf="@id/tvTimer"
+        app:layout_constraintStart_toStartOf="@id/tvTimer"
+        app:layout_constraintEnd_toEndOf="@id/tvTimer"
         app:layout_constraintTop_toBottomOf="@id/tvTimer"/>
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -52,42 +51,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/timer_style"
-        android:text="15:49"
-        android:textSize="48sp"
+        android:inputType="time"
+        android:textSize="@dimen/timer_font_size"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
+        android:padding="@dimen/button_padding"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tvScore"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvFirstTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/first_team"
-        android:textSize="24sp"
+        android:textSize="@dimen/team_font_size"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        app:layout_constraintLeft_toLeftOf="@+id/ivWinner"
+        app:layout_constraintStart_toStartOf="@+id/ivWinner"
         app:layout_constraintBottom_toTopOf="@id/ivWinner"
-        app:layout_constraintRight_toRightOf="@id/ivWinner"/>
+        app:layout_constraintEnd_toEndOf="@id/ivWinner"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvSecondTeam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Second team"
-        android:textSize="24sp"
+        android:text="@string/second_team"
+        android:textSize="@dimen/team_font_size"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        app:layout_constraintRight_toRightOf="@id/ivLoser"
+        app:layout_constraintEnd_toEndOf="@id/ivLoser"
         app:layout_constraintBottom_toTopOf="@id/ivLoser"
-        app:layout_constraintLeft_toLeftOf="@id/ivLoser"/>
+        app:layout_constraintStart_toStartOf="@id/ivLoser"/>
 
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -99,20 +95,19 @@
         app:layout_constraintWidth_percent="0.3"
         app:layout_constraintBottom_toBottomOf="@id/tvScore"
         app:layout_constraintTop_toTopOf="@id/tvScore"
-        app:layout_constraintRight_toLeftOf="@id/tvScore"/>
+        app:layout_constraintEnd_toStartOf="@id/tvScore"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1:0"
-        android:textSize="96sp"
+        android:textSize="@dimen/score_font_size_two"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivLoser"
@@ -123,7 +118,7 @@
         app:layout_constraintWidth_percent="0.3"
         app:layout_constraintBottom_toBottomOf="@id/tvScore"
         app:layout_constraintTop_toTopOf="@id/tvScore"
-        app:layout_constraintLeft_toRightOf="@id/tvScore"/>
+        app:layout_constraintStart_toEndOf="@id/tvScore"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnGoalFirst"
@@ -131,13 +126,13 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_style"
         android:text="@string/goal"
-        android:textSize="24sp"
-        android:padding="16dp"
-        android:layout_margin="12dp"
+        android:textSize="@dimen/team_font_size"
+        android:padding="@dimen/button_padding"
+        android:layout_margin="@dimen/button_margin"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
         app:layout_constraintLeft_toLeftOf="@id/ivWinner"
-        app:layout_constraintRight_toRightOf="@id/ivWinner"
+        app:layout_constraintEnd_toEndOf="@id/ivWinner"
         app:layout_constraintTop_toBottomOf="@id/ivWinner" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -146,13 +141,13 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_style_disabled"
         android:text="@string/goal"
-        android:textSize="24sp"
-        android:padding="16dp"
-        android:layout_margin="12dp"
+        android:textSize="@dimen/team_font_size"
+        android:padding="@dimen/button_padding"
+        android:layout_margin="@dimen/button_margin"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        app:layout_constraintLeft_toLeftOf="@id/ivLoser"
-        app:layout_constraintRight_toRightOf="@id/ivLoser"
+        app:layout_constraintStart_toStartOf="@id/ivLoser"
+        app:layout_constraintEnd_toEndOf="@id/ivLoser"
         app:layout_constraintTop_toBottomOf="@id/ivLoser"/>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -161,13 +156,12 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_style"
         android:text="@string/finish_now"
-        android:textSize="16sp"
+        android:textSize="@dimen/button_font_size"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        android:padding="12dp"
-        android:layout_margin="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:padding="@dimen/button_padding"
+        android:layout_margin="@dimen/button_margin"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

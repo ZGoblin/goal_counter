@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:src="@drawable/background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/winner"
+        android:textSize="@dimen/score_font_size_two"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvWinnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_team"
+        android:textSize="@dimen/winner_font"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWinner"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivWinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_playerw"
+        app:layout_constraintHeight_percent="0.21"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintTop_toBottomOf="@id/tvWinnerName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/score_font_size_two"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        app:layout_constraintTop_toBottomOf="@id/ivWinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLoserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/first_team"
+        android:textSize="@dimen/period_font_size"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvScore"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLoser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_playerl"
+        app:layout_constraintHeight_percent="0.17"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toBottomOf="@id/tvLoserName"
+        app:layout_constraintBottom_toTopOf="@+id/btnMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu"
+        android:background="@drawable/button_style"
+        android:textSize="@dimen/button_font_size"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:layout_margin="@dimen/button_margin"
+        app:layout_constraintTop_toBottomOf="@id/ivLoser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnShare"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/share"
+        android:background="@drawable/button_style"
+        android:textSize="@dimen/button_font_size"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:layout_margin="@dimen/button_margin"
+        app:layout_constraintTop_toBottomOf="@id/ivLoser"
+        app:layout_constraintStart_toEndOf="@+id/btnMenu"
+        app:layout_constraintEnd_toStartOf="@id/btnWinnerList"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnWinnerList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winners"
+        android:background="@drawable/button_style"
+        android:textSize="@dimen/button_font_size"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:layout_margin="@dimen/button_margin"
+        app:layout_constraintTop_toBottomOf="@id/ivLoser"
+        app:layout_constraintStart_toEndOf="@id/btnShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

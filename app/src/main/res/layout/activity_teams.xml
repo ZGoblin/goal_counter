@@ -22,8 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintHeight_percent="0.25"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/tvChoosegame"
         app:srcCompat="@drawable/logo_png" />
@@ -32,23 +32,24 @@
         android:id="@+id/tvChoosegame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/choose_game"
+        android:text="@string/presets"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        android:textSize="28sp"
+        android:textSize="@dimen/team_font_size"
         app:layout_constraintTop_toBottomOf="@id/ivLogo"
         app:layout_constraintBottom_toTopOf="@id/rvGameList"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGameList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:foregroundGravity="center"
         app:layout_constraintTop_toBottomOf="@id/tvChoosegame"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginBottom="4dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/recycler_margin"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivWinner"
@@ -58,8 +59,8 @@
         app:layout_constraintHeight_percent="0.17"
         app:layout_constraintWidth_percent="0.3"
         app:layout_constraintTop_toBottomOf="@id/rvGameList"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/ivLoser"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivLoser"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/ivLoser"
@@ -69,15 +70,15 @@
         app:layout_constraintHeight_percent="0.17"
         app:layout_constraintWidth_percent="0.3"
         app:layout_constraintTop_toBottomOf="@id/rvGameList"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/ivWinner"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivWinner"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilWinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/first_team"
-        app:boxStrokeWidth="4dp"
+        app:boxStrokeWidth="@dimen/box_stroke"
         app:errorEnabled="true"
         app:layout_constraintTop_toBottomOf="@id/ivWinner"
         app:layout_constraintLeft_toLeftOf="@id/ivWinner"
@@ -102,11 +103,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/second_team"
-        app:boxStrokeWidth="4dp"
+        app:boxStrokeWidth="@dimen/box_stroke"
         app:errorEnabled="true"
         app:layout_constraintTop_toBottomOf="@id/ivLoser"
-        app:layout_constraintLeft_toLeftOf="@id/ivLoser"
-        app:layout_constraintRight_toRightOf="@id/ivLoser">
+        app:layout_constraintStart_toStartOf="@id/ivLoser"
+        app:layout_constraintEnd_toEndOf="@id/ivLoser">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/tieLoser"
@@ -127,15 +128,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/start"
-        android:textSize="20sp"
+        android:textSize="@dimen/team_font_size"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:padding="@dimen/button_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilWinner"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -145,11 +143,11 @@
         android:layout_height="wrap_content"
         android:background="@drawable/button_style"
         android:text="@string/back"
-        android:textSize="16sp"
-        android:layout_margin="12dp"
+        android:textSize="@dimen/button_font_size"
+        android:layout_margin="@dimen/button_margin"
         android:textColor="@color/white"
         android:fontFamily="@font/righteous"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

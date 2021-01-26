@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/button_style"
+    android:padding="12dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:textSize="@dimen/period_font_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/times"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:textSize="@dimen/font_size_dialog"
+        android:layout_marginEnd="@dimen/button_margin"
+        app:layout_constraintTop_toTopOf="@id/tilTimes"
+        app:layout_constraintBottom_toBottomOf="@id/tilTimes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tilTimes"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTimes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/amount_of_times"
+        app:boxStrokeWidth="@dimen/box_stroke"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tvSetting"
+        app:layout_constraintStart_toEndOf="@id/tvTimes"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieTimes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/font_size_input"
+            android:fontFamily="@font/righteous"
+            android:textColor="@color/white"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:maxLength="2"
+            android:background="@android:color/transparent"
+            android:inputType="numberSigned"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/duration"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:textSize="@dimen/font_size_dialog"
+        android:layout_marginEnd="@dimen/button_margin"
+        app:layout_constraintTop_toTopOf="@id/tilDuration"
+        app:layout_constraintBottom_toBottomOf="@id/tilDuration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tilDuration"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilDuration"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/duration_of_one_time"
+        app:boxStrokeWidth="@dimen/box_stroke"
+        app:errorEnabled="true"
+        app:layout_constraintTop_toBottomOf="@id/tilTimes"
+        app:layout_constraintStart_toEndOf="@id/tvDuration"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieDuration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/righteous"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_input"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:maxLength="2"
+            android:background="@android:color/transparent"
+            android:inputType="time"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="@string/go"
+        android:textColor="@color/white"
+        android:fontFamily="@font/righteous"
+        android:textSize="@dimen/period_font_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilDuration"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
