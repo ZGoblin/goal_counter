@@ -109,26 +109,33 @@ class WinnerActivity:AppCompatActivity() {
         val firstTeamScore = intent.getIntExtra(FIRST_TEAM_SCORE, 0)
         val secondTeamScore = intent.getIntExtra(SECOND_TEAM_SCORE, 0)
         binding.tvScore.text = getString(R.string.score, firstTeamScore, secondTeamScore)
-        if (secondTeamScore > firstTeamScore) {
-            val winner = intent.getStringExtra(SECOND_TEAM_NAME)
-            binding.tvWinnerName.text = winner
-            binding.ivWinner.setImageResource(R.drawable.ic_playerl)
-            binding.tvLoserName.text = intent.getStringExtra(FIRST_TEAM_NAME)
-            binding.ivLoser.setImageResource(R.drawable.ic_playerw)
-            winner?.let {
-                DataHolder.instance().addWinner(it, secondTeamScore)
+        when {
+            secondTeamScore > firstTeamScore -> {
+                val winner = intent.getStringExtra(SECOND_TEAM_NAME)
+                binding.tvWinnerName.text = winner
+                binding.ivWinner.setImageResource(R.drawable.ic_playerl)
+                binding.tvLoserName.text = intent.getStringExtra(FIRST_TEAM_NAME)
+                binding.ivLoser.setImageResource(R.drawable.ic_playerw)
+                winner?.let {
+                    DataHolder.instance().addWinner(it, secondTeamScore)
+                }
             }
-        }
-        else {
-            val winner = intent.getStringExtra(FIRST_TEAM_NAME)
-            binding.tvWinnerName.text = intent.getStringExtra(FIRST_TEAM_NAME)
-            binding.ivWinner.setImageResource(R.drawable.ic_playerw)
-            binding.tvLoserName.text = intent.getStringExtra(SECOND_TEAM_NAME)
-            binding.ivLoser.setImageResource(R.drawable.ic_playerl)
-            if (secondTeamScore != firstTeamScore) {
+            secondTeamScore < firstTeamScore -> {
+                val winner = intent.getStringExtra(FIRST_TEAM_NAME)
+                binding.tvWinnerName.text = winner
+                binding.ivWinner.setImageResource(R.drawable.ic_playerw)
+                binding.tvLoserName.text = intent.getStringExtra(SECOND_TEAM_NAME)
+                binding.ivLoser.setImageResource(R.drawable.ic_playerl)
                 winner?.let {
                     DataHolder.instance().addWinner(it, firstTeamScore)
                 }
+            }
+            else -> {
+                binding.tvWinner.text = getString(R.string.dead_head)
+                binding.tvWinnerName.text = intent.getStringExtra(FIRST_TEAM_NAME)
+                binding.ivWinner.setImageResource(R.drawable.ic_playerw)
+                binding.tvLoserName.text = intent.getStringExtra(SECOND_TEAM_NAME)
+                binding.ivLoser.setImageResource(R.drawable.ic_playerl)
             }
         }
     }
