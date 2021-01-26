@@ -28,8 +28,8 @@ class DataHolder private constructor() {
         sort()
     }
 
-    fun sort() {
-        winnerList.sortBy { it.score }
+    private fun sort() {
+        winnerList.sortByDescending(Winner::score)
     }
 
     fun halfsInGame(game: Int): Int {

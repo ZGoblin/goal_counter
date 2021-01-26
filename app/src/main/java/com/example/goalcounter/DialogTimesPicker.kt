@@ -31,7 +31,7 @@ class DialogTimesPicker(private val firstTeamName: String, private val secondTea
         val twMinLength = object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
                 s?.also {
-                    var input: Int = 0
+                    val input: Int
                     try {
                         input = it.toString().toInt()
                     }

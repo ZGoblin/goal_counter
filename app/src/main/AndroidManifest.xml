@@ -24,19 +24,23 @@
         </activity>
         <activity
             android:name=".TeamsActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:noHistory="true">
         </activity>
         <activity
             android:name=".MatchActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:noHistory="true">
         </activity>
         <activity
             android:name=".WinnerActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:noHistory="true">
         </activity>
         <activity
             android:name=".ListActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:noHistory="true">
         </activity>
     </application>
 

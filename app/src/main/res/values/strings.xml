@@ -21,7 +21,7 @@
     <string name="share">Share</string>
     <string name="clear">Clear</string>
     <string name="time_is_over">Time is over</string>
-    <string name="time_is_over_message">Times is over. When the break is over, press the button</string>
+    <string name="time_is_over_message">Time is over. When the break is over, press the button!</string>
     <string name="play_button">Here goes!</string>
     <string name="exit">Exit</string>
     <string name="exit_message">Cancel the game?</string>
@@ -32,5 +32,5 @@
     <string name="score">%d:%d</string>
     <string name="winner_list">Winner list</string>
     <string name="go">Go!</string>
-    <string name="dead_head">Dead heat</string>
+    <string name="dead_head">Tie</string>
 </resources>
