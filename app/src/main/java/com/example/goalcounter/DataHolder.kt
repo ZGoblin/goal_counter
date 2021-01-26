@@ -25,6 +25,11 @@ class DataHolder private constructor() {
             }
         }
         winnerList.add(winner)
+        sort()
+    }
+
+    fun sort() {
+        winnerList.sortBy { it.score }
     }
 
     fun halfsInGame(game: Int): Int {
