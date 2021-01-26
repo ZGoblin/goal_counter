@@ -1,1 +1,1 @@
-# goal_counter
+# ZAIETS OLEH Game score app
