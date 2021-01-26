@@ -21,6 +21,7 @@ class DataHolder private constructor() {
         winnerList.forEach {
             if (it.name == winner.name) {
                 it.score += score
+                sort()
                 return
             }
         }
