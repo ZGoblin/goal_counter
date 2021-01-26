@@ -53,6 +53,7 @@ class MatchActivity: AppCompatActivity() {
         binding.tvSecondTeam.text = intent.getStringExtra(SECOND_TEAM_NAME)
         duration = intent.getLongExtra(DURATION, 60)
         times = intent.getIntExtra(TIMES, 1)
+        binding.tvScore.text = getString(R.string.score, 0, 0)
     }
 
     private fun setupTimer() {
